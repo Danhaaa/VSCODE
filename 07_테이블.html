@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_테이블.html</title>
+</head>
+<body>
+    
+<h3># 웹 페이지에 표 출력하기</h3>
+
+<p>
+    &lt;table&gt; : 표의 범위를 지정하는 태그 <br>
+    &lt;tr&gt; : table row, 표에 한 줄을 추가하는 태그 <br>
+    &lt;th&gt; : table header, 해당 줄에 제목 칸을 추가하는 태그 <br>
+    &lt;td&gt; : table data, 해당 줄에 데이터 칸을 추가하는 태그 <br>
+
+</p>
+
+<table border="5">
+<tr>
+    <th>국어</th>
+    <th>영어</th>
+    <th>수학</th>
+    <th>과학</th>
+    <th>기술</th>
+    <th>총합</th>
+</tr>
+
+<tr>
+    <td>100</td>
+    <td>25</td>
+    <td>44</td>
+    <td>72</td>
+    <td>83</td>
+    <td>?</td>
+</tr>
+
+</table>
+
+<table>
+<tr>
+    <th>이름</th>
+    <th colspan="2">전화번호</th><!--2 column을 차지하게 된다-->
+    <th>이메일</th>
+    <th>비고</th>
+</tr>
+<tr>
+    <td rowspan="2">빌 게이츠</td>
+    <td>010-1234-1234</td>
+    <td>없음</td>
+    <td>bill@microsoft.com</td>
+    <td><img src="data:image/jpeg;base64,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" width="50"></td>
+
+
+</tr>
+<tr>
+    <td>010-1111-1111</td>
+    <td>Nothing</td>
+    <td>bill3@microsoft.com</td>
+    <td>No</td>
+</tr>
+</table>
+
+
+
+<table border="5">
+<tr>
+    <th rowspan="6">Hours</th>
+    <th>Mon</th>
+    <th>Tue</th>
+    <th>Wed</th>
+    <th>Thu</th>
+    <th>Fri</th>
+</tr>
+
+<tr>
+    <td>Science</td>
+    <td>Maths</td>
+    <td>Science</td>
+    <td>Maths</td>
+    <td>Arts</td>
+</tr>
+
+<tr>
+    <td>Social</td>
+    <td>History</td>
+    <td>English</td>
+    <td>Social</td>
+    <td>Sports</td>
+</tr>
+
+<th colspan="5"> Lunch </th>
+
+<tr>
+    <td>Science</td>
+    <td>Maths</td>
+    <td>Science</td>
+    <td>Maths</td>
+    <td rowspan="2">Project</td>
+</tr>
+
+<tr>
+    <td>Social</td>
+    <td>History</td>
+    <td>English</td>
+    <td>Social</td>
+</tr>
+</table>
+
+
+</body>
+</html>
